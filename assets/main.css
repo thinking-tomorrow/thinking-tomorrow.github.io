@@ -1,0 +1,149 @@
+.parallax {
+    /* The image used */
+  
+    /* Set a specific height */
+    /* min-height: 500px;  */
+    min-height: 200px;
+  
+    /* Create the parallax scrolling effect */
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.begin{
+    padding-top:50px;
+    padding-bottom:10px;
+    text-align:center;
+}
+ 
+.update{
+    padding-top:10px;
+    text-align:center;
+    font-size:15px;
+    padding-bottom: 50px;;
+}
+
+.carousel-caption * {
+    text-align: left;
+}
+
+.carousel-item img{
+    height: 200px;
+}
+
+
+@media (min-width:1025px){
+    .carousel-item{
+        height: 500px;
+    }
+
+    .carousel-item img{
+        height: 500px;
+    }
+}
+
+
+.world{
+    text-align:center;
+    padding-top: 25px;
+    font-size:40px;
+}
+
+.link{
+    font-size: 15px;
+    padding-top:30px;
+    padding-bottom:20px;
+    color: lightgreen;
+    
+}
+
+.link-next{
+    padding-left:15px;
+    color:lightgreen;    
+}
+
+#cases{
+    font-size:30px;
+    text-align:center;
+    padding-top: 15px;
+    font-weight:bold;
+}
+
+#deaths{
+    font-size:30px;
+    text-align:center;
+    padding-top: 15px;
+    font-weight:bold;
+    color:red;
+}
+
+#recovery{
+    font-size:30px;
+    text-align:center;
+    padding-top: 15px;
+    font-weight:bold;
+    color:green;
+}
+
+.fas{
+    cursor: pointer;
+}
+
+tr{
+    /* opacity: 0.5; */
+}
+
+tr:hover{
+    cursor: pointer;
+}
+
+tr:first-child:hover{
+    cursor: inherit;
+}
+
+.loader {
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.loader > img {
+    width: 1000px;
+}
+
+.loader.hidden {
+    animation: fadeOut 1s;
+    animation-fill-mode: forwards;
+}
+
+@keyframes fadeOut {
+    100% {
+        opacity: 0;
+        visibility: hidden;
+    }
+}
+
+.thumb {
+    height: 100px;
+    border: 1px solid black;
+    margin: 10px;
+}
+
+footer {
+    margin: 0;
+    padding: 0;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    color: white;
+    text-align: center;
+  }
