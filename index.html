@@ -32,9 +32,22 @@
         padding: 20px;
       }
 
-      a{
+      #a{
         color: blue;
         text-decoration: underline;
+      }
+
+      body{
+
+        background-image: url('assets/background_about.jpg'); 
+        background-size: covers; 
+        background-repeat:no-repeat; 
+        object-fit : fill;
+
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        -o-background-size: cover;
+        background-size: cover;
       }
     </style>
 
@@ -70,7 +83,7 @@
 
     <title>THINKING TOMORROW</title>
   </head>
-  <body style="background-image: url('assets/background_about.jpg'); background-size: covers">
+  <body >
     
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <a class="navbar-brand" href="#">Navbar</a>
@@ -81,13 +94,13 @@
   <div class="collapse navbar-collapse" id="navbarSupportedContent">
     <ul class="navbar-nav mr-auto">
       <li class="nav-item active">
-        <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#"><i class="fas fa-home"></i> Home</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">About Us</a>
+        <a class="nav-link" href="#"><i class="fas fa-address-card"></i> About Us</a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">Some Of our Projects</a>
+        <a class="nav-link" href="#"><i class="fas fa-project-diagram"></i> Some Of our Projects</a>
       </li>
       
     </ul>
@@ -108,7 +121,7 @@
     </center>
 
     <div class="detail">
-      <h3>WHO ARE WE ?</h3>
+      <h3 style="color: white;">WHO ARE WE ?</h3>
       <p>We are 
       <b><a style="color: blue; text-decoration: underline; cursor: pointer" tabindex="0" data-trigger="focus hover" data-toggle="popover" id="sajjad">Sajjad Ahmed</a></b> and 
       <b><a style="color: blue; text-decoration: underline; cursor: pointer" tabindex="0" data-trigger="focus hover" data-toggle="popover" id="hrishi">Hrishikesh Bhanja</a></b> of Don bosco School, Park Circus. Our job is to tranform this world into a better place through technology. Visit our <a href="https://github.com/thinking-tomorrow" target="_blank">GitHub page</a> to know more.</p>
