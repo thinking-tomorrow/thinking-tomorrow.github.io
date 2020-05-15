@@ -16,6 +16,9 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <style>
+      html {
+        scroll-behavior: smooth;
+      }
       img{
         margin-top: 30px;
       }
@@ -76,6 +79,17 @@
           });
         });
 
+        var i = 0;
+        var txt = 'Thinking Tomorrow';
+        var speed = 60;
+
+        function typeWriter() {
+          if (i < txt.length) {
+            document.getElementById("heading").innerHTML += txt.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+          }
+        }
     </script>
 
     <!-- Font Awesome Script -->
@@ -83,60 +97,59 @@
 
     <title>THINKING TOMORROW</title>
   </head>
-  <body >
-    
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-  <a class="navbar-brand" href="#">Navbar</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
 
-  <div class="collapse navbar-collapse" id="navbarSupportedContent">
-    <ul class="navbar-nav mr-auto">
-      <li class="nav-item active">
-        <a class="nav-link" href="#"><i class="fas fa-home"></i> Home</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fas fa-address-card"></i> About Us</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fas fa-project-diagram"></i> Some Of our Projects</a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#"><i class="fas fa-id-card-alt"></i>Contact Us</a>
-      </li>
-    </ul>
-    <form class="form-inline my-2 my-lg-0">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
-  </div>
-</nav>
+  <body onload="typeWriter()">  
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <a class="navbar-brand" href="#">Thinking Tomorrow</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item active">
+            <a class="nav-link" href="#"><i class="fas fa-home"></i> Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#about"><i class="fas fa-address-card"></i> About Us</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#project"><i class="fas fa-project-diagram"></i> Some Of our Projects</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#contact"><i class="fas fa-id-card-alt"></i>Contact Us</a>
+          </li>
+        </ul>
+        <form class="form-inline my-2 my-lg-0">
+          <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
+        </form>
+      </div>
+    </nav>
 
     <div class="loader">
       <img src="assets/preloader.svg" alt="Loading..." />
     </div>
 
     <center>
-      <h1 style='text-align:center;padding-top:20px;padding-bottom:25px;font-size:80px;color:white;'>Thinking Tomorrow</h1>
+      <h1 style='text-align:center;padding-top:20px;padding-bottom:25px;font-size:80px;color:white;' id='heading'></h1>
       <img src="assets/logo.png">
     </center>
 
-    <div class="detail">
+    <div class="detail" id="about">
       <h3 style="color: white;">WHAT IS THINKING TOMORROW ?</h3>
       
-      <p style="color:white;"><b>Thinking Tomorrow</b> is a non-profittable organisation that works continuously to transform the present days world with the use of technology . We beleive 
-      technology is a tool that can revolutionize the present world if used extensively . We try to give radiance of technology in every human's life . However , that does not
-      advocate the triumph of technologial resources over Human resources . Human was,is and will always be the master of whatever technological resources present in the world 
-      and these resources will just help us in our daily life . This is what we try to achieve by integration of technology into every human's life . </p>
+      <p style="color:white;"><b>Thinking Tomorrow</b> is a non-profitable organisation that works continuously to transform the present days world with the use of technology . We beleive 
+      technology is a tool that can revolutionize the present world if used extensively. We try to give radiance of technology in every human's life. However, that does not
+      advocate the triumph of technologial resources over Human Resources. Human was, is and will always be the master of whatever technological resources present in the world 
+      and these resources will just help us in our daily life. This is what we try to achieve by integration of technology into every human's life . </p>
   
-      <h3 color="white"></h3>
       <p style="color:white;">We are 
       <b><a style="color:  gold; text-decoration: underline; cursor: pointer" tabindex="0" data-trigger="focus hover" data-toggle="popover" id="sajjad">Sajjad Ahmed</a></b> and 
       <b><a style="color: gold; text-decoration: underline; cursor: pointer" tabindex="0" data-trigger="focus hover" data-toggle="popover" id="hrishi">Hrishikesh Bhanja</a></b> of Don bosco School, Park Circus. Our job is to tranform this world into a better place through technology. Visit our <a href="https://github.com/thinking-tomorrow" target="_blank" style="color:gold;">GitHub page</a> to know more.</p>
     </div>
 
-    <div class="detail">
+    <div class="detail" id="project">
       <h3 style="color:white;">WHAT DO WE DO ?</h3>
       <p style="color:white;">We have done a number of projects . All of these projects were built around practical implementation in day-to-day life . Given below  is a list of some of the projects done by us : </p>
 
@@ -144,15 +157,11 @@
         <a href="https://github.com/thinking-tomorrow/Covid19" target="_blank" style="color:gold;"><li>Covid Info - A website spreading public awareness amongst people about COVID-19.</li></a>
         <a href="https://github.com/thinking-tomorrow/chatapplication" target="_blank" style="color: gold;"><li>Chat Application - A socket based end to end encrypted chat application.</li></a>
       </ul>
-      <br>
-      <p style="color:white;">To learn more about our projects , visit our project page : <a href="#" style="color:  gold"><b>Some of Our Projects</b></a></p>
     </div>
 
-    <div class="detail">
+    <div class="detail" id="contact">
       <h3 style="color:white;">CONTACT US</h3>
       <p style="color:white;">We are always available for your needs . You are free to contact us whenever needed . Contact us at <a href="mailto:mailsajjad006@gmail.com" target="_blank" style="color: gold;">mailsajjad006@gmail.com</a> and <a href="mailto:hrishipotter123@gmail.com" target="_blank" style="color: gold;">hrishipotter123@gmail.com</a></p>
-      <br>
-      <p style="color:white;">To learn more about contacting us visit this page : <a href="#" style="color:gold;"><b>Contact us</b></a></p>
     </div>
     
     <script>
