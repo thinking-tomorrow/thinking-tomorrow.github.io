@@ -5,105 +5,27 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 
-    <!-- My Style Sheets -->
-    <link rel="stylesheet" href="assets/main.css">
-    
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="shortcut icon" type="image/x-icon" href="assets/faviconlogo.ico" />
+    
     <!-- jQuery -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
-
-    <style>
-      html {
-        scroll-behavior: smooth;
-      }
-      img{
-        margin-top: 30px;
-      }
-
-      @media only screen and (max-width: 600px) {
-        img{
-          margin-top: 30px;
-          width:50%;
-        }
-
-        #brand{
-          margin-top: 0px;
-          width:40px;
-        }
-      }
-
-      .detail{
-        margin: 15px;
-        padding: 20px;
-      }
-
-      #a{
-        color: blue;
-        text-decoration: underline;
-      }
-
-      body{
-
-        background-image: url('assets/background_about.jpg'); 
-        background-size: covers; 
-        background-repeat:no-repeat; 
-        object-fit : fill;
-
-        -webkit-background-size: cover;
-        -moz-background-size: cover;
-        -o-background-size: cover;
-        background-size: cover;
-      }
-    </style>
-
-      <script>
-        $(document).ready(function (){
-          $('[data-toggle="popover"]').each( function() {
-            //try doing console log out of popover.
-            id = $(this).attr('id');
-
-            if (id=='sajjad'){
-              title_tag = "<h4>Sajjad Ahmed</h4>"
-              content_tag = '<div><p>Studying at Don Bosco School, Park Circus (class 9). A tech geek. Love to code and in love with Java and Python. Inquisitive about electronics.</p><a href="https://github.com/sajjad006" target="_blank"><i class="fab fa-github"></i>https://github.com/sajjad006</a><br><a target="_blank" href="mailto://mailsajjad006@gmail.com"><i class="far fa-envelope-open"></i> mailsajjad006@gmail.com</a></div>'
-            }else{
-              title_tag = "<h4>Hrishikesh Bhanja</h4>"
-              content_tag = '<div><p>Student @ Don Bosco School Park Circus - class 9(13 years old). Love Python . AI admirer . Linux fan and Open Source fanatic . Best things in life are free !</p><a href="https://github.com/Hrishikesh-coder" target="_blank"><i class="fab fa-github"></i> https://github.com/Hrishikesh-coder</a><br><a target="_blank" href="mailto://hrishipotter123@gmail.com"><i class="far fa-envelope-open"></i> hrishipotter123@gmail.com</a></div>'
-            }
-
-            
-            $(this).popover({
-              title: title_tag, 
-              content: content_tag,
-              html: true,
-              placement: "top",
-              animation: true,
-            }); 
-          });
-        });
-
-        var i = 0;
-        var txt = 'Thinking Tomorrow';
-        var speed = 60;
-
-        function typeWriter() {
-          if (i < txt.length) {
-            document.getElementById("heading").innerHTML += txt.charAt(i);
-            i++;
-            setTimeout(typeWriter, speed);
-          }
-        }
-    </script>
 
     <!-- Font Awesome Script -->
     <script src="https://kit.fontawesome.com/74ba14d0ba.js" crossorigin="anonymous"></script>
 
+    <!-- My Style Sheets -->
+    <link rel="stylesheet" href="assets/main.css">
+
+    <!-- My Script -->
+    <script src="assets/main.js"></script>
+
     <title>THINKING TOMORROW</title>
   </head>
 
-  <body onload="typeWriter()">  
+  <body onload="type()">  
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
       
       <a class="navbar-brand" href="#">
@@ -127,7 +49,7 @@
             <a class="nav-link" href="#project"><i class="fas fa-project-diagram"></i> Some Of our Projects</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link" href="#contact"><i class="fas fa-id-card-alt"></i>Contact Us</a>
+            <a class="nav-link" href="#contact"><i class="fas fa-id-card-alt"></i> Contact Us</a>
           </li>
         </ul>
         <form class="form-inline my-2 my-lg-0">
@@ -146,8 +68,8 @@
       <img src="assets/logo.png">
     </center>
 
-    <div class="detail" id="about">
-      <h3 style="color: white;">WHAT IS THINKING TOMORROW ?</h3>
+    <div id="about" class="detail">
+      <h3 style="color: white;" class='type-content'>WHAT IS THINKING TOMORROW ?</h3>
       
       <p style="color:white;"><b>Thinking Tomorrow</b> is a non-profitable organisation that works continuously to transform the present days world with the use of technology . We beleive 
       technology is a tool that can revolutionize the present world if used extensively. We try to give radiance of technology in every human's life. However, that does not
@@ -155,11 +77,11 @@
       and these resources will just help us in our daily life. This is what we try to achieve by integration of technology into every human's life . </p>
   
       <p style="color:white;">We are 
-      <b><a style="color:  gold; text-decoration: underline; cursor: pointer" tabindex="0" data-trigger="focus hover" data-toggle="popover" id="sajjad">Sajjad Ahmed</a></b> and 
+      <b><a style="color: gold; text-decoration: underline; cursor: pointer" tabindex="0" data-trigger="focus hover" data-toggle="popover" id="sajjad">Sajjad Ahmed</a></b> and 
       <b><a style="color: gold; text-decoration: underline; cursor: pointer" tabindex="0" data-trigger="focus hover" data-toggle="popover" id="hrishi">Hrishikesh Bhanja</a></b> of Don bosco School, Park Circus. Our job is to tranform this world into a better place through technology. Visit our <a href="https://github.com/thinking-tomorrow" target="_blank" style="color:gold;">GitHub page</a> to know more.</p>
     </div>
 
-    <div class="detail" id="project">
+    <div id="project" class="detail">
       <h3 style="color:white;">WHAT DO WE DO ?</h3>
       <p style="color:white;">We have done a number of projects . All of these projects were built around practical implementation in day-to-day life . Given below  is a list of some of the projects done by us : </p>
 
@@ -169,7 +91,7 @@
       </ul>
     </div>
 
-    <div class="detail" id="contact">
+    <div id="contact" class="detail">
       <h3 style="color:white;">CONTACT US</h3>
       <p style="color:white;">We are always available for your needs . You are free to contact us whenever needed . Contact us at <a href="mailto:mailsajjad006@gmail.com" target="_blank" style="color: gold;">mailsajjad006@gmail.com</a> and <a href="mailto:hrishipotter123@gmail.com" target="_blank" style="color: gold;">hrishipotter123@gmail.com</a></p>
     </div>

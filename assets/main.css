@@ -1,106 +1,6 @@
-.parallax {
-    /* The image used */
-  
-    /* Set a specific height */
-    /* min-height: 500px;  */
-    min-height: 200px;
-  
-    /* Create the parallax scrolling effect */
-    background-attachment: fixed;
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: cover;
-}
-
-.begin{
-    padding-top:50px;
-    padding-bottom:10px;
-    text-align:center;
-}
- 
-.update{
-    padding-top:10px;
-    text-align:center;
-    font-size:15px;
-    padding-bottom: 50px;;
-}
-
-.carousel-caption * {
-    text-align: left;
-}
-
-.carousel-item img{
-    height: 200px;
-}
-
-
-@media (min-width:1025px){
-    .carousel-item{
-        height: 500px;
-    }
-
-    .carousel-item img{
-        height: 500px;
-    }
-}
-
-
-.world{
-    text-align:center;
-    padding-top: 25px;
-    font-size:40px;
-}
-
-.link{
-    font-size: 15px;
-    padding-top:30px;
-    padding-bottom:20px;
-    color: lightgreen;
-    
-}
-
-.link-next{
-    padding-left:15px;
-    color:lightgreen;    
-}
-
-#cases{
-    font-size:30px;
-    text-align:center;
-    padding-top: 15px;
-    font-weight:bold;
-}
-
-#deaths{
-    font-size:30px;
-    text-align:center;
-    padding-top: 15px;
-    font-weight:bold;
-    color:red;
-}
-
-#recovery{
-    font-size:30px;
-    text-align:center;
-    padding-top: 15px;
-    font-weight:bold;
-    color:green;
-}
 
 .fas{
     cursor: pointer;
-}
-
-tr{
-    /* opacity: 0.5; */
-}
-
-tr:hover{
-    cursor: pointer;
-}
-
-tr:first-child:hover{
-    cursor: inherit;
 }
 
 .loader {
@@ -132,18 +32,38 @@ tr:first-child:hover{
     }
 }
 
-.thumb {
-    height: 100px;
-    border: 1px solid black;
-    margin: 10px;
+html {
+    scroll-behavior: smooth;
+}
+img{
+    margin-top: 30px;
 }
 
-footer {
-    margin: 0;
-    padding: 0;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    color: white;
-    text-align: center;
-  }
+@media only screen and (max-width: 600px) {
+    img{
+        margin-top: 30px;
+        width:50%;
+    }
+
+    #brand{
+        margin-top: 0px;
+        width:40px;
+    }
+}
+
+.detail{
+    margin: 15px;
+    padding: 20px;
+}
+
+body{
+    background-image: url('background_about.jpg'); 
+    background-size: covers; 
+    background-repeat:no-repeat; 
+    object-fit : fill;
+
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+}
