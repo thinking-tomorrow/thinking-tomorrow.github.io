@@ -1,24 +1,15 @@
-function updateScroll(){
-    var element = document.getElementById("yourDivID");
-    element.scrollTop = element.scrollHeight;
+function checkVisible(elm) {
+  var rect = elm.getBoundingClientRect();
+  var viewHeight = Math.max(document.documentElement.clientHeight, window.innerHeight);
+  return !(rect.bottom < 0 || rect.top - viewHeight >= 0);
 }
 
 var i = 0;
 var txt=[];
-var speed = 50;
+var speed = 60;
 
 function type(){
-    // elements = document.getElementsByClassName('type-content');
-
-    // for(var j=0;j<elements.length;j++){
-    //     txt.push(elements[j].innerHTML);
-    //     elements[j].innerHTML = ''
-    // }
-
-    // for(var j=0;j<elements.length;j++){
-    //     typeWriter(txt[j], elements[j]);
-    // }
-    typeWriter('Thinking Tomorrow', document.getElementById('heading'))
+  typeWriter('Thinking Tomorrow', document.getElementById('heading'));
 }
 
 function typeWriter(text, element) {
